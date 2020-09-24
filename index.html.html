@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.css" integrity="sha256-a2tobsqlbgLsWs7ZVUGgP5IvWZsx8bTNQpzsqCSm5mk=" crossorigin="anonymous" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./css/mystyle.css">
+    <link rel="icon" 
+      type="image/png" 
+      href="images/leaf_Logo.png" />
+    
+   <!--<script src="./js/myJavascript.js"></script>--> 
+    <!--<script src="./js/simple.money.format.js"></script>-->
+
+    <title>ZIGBA MODEL</title>
+</head>
+<style>
+    @media print {
+  body * {
+    visibility: hidden;
+    
+  }
+
+  *{ color-adjust: exact; 
+  -webkit-print-color-adjust: exact;
+  
+    }
+
+   #enegyPerform1 * {
+    visibility: visible;
+  }
+  #enegyPerform1 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 0px;
+    padding: 0px;
+   
+  }
+
+ 
+}
+</style>
+<body>
+    <div class="container-fluid wrapper">
+        
+        <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+            <a class="navbar-brand" href="#"><img src="images/leaf_Logo.png" alt="" width="60px" height="48px"></a><span class="text-light">ZIGBA MODEL</span>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+              <ul class="navbar-nav ">
+                <li class="nav-item">
+                  <a class="nav-link active" href="#">Home |</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">About |</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Signing |</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Assessing</a>
+                  </li>
+              </ul>
+            </div>  
+          </nav>
+    </div>
+
+
+
+
+<!--Side floating -->
+    <div class="container sidebutton" style="width:500px">
+        <h6 style="text-orientation:upright;"></h6>
+    </div>
+<!--/Side floating -->
+
+    <div class="container">
+
+
+
+
+
+        <!--first widget-->
+
+
+
+       
+                
+                <div class="first-widget mt-5 d-flex" style="align-items: center;justify-content: center;">
+                  
+                    <div class="card first" style="width:450px;">
+                      <!--<img class="card-img-top" src="images/grnbuilding.jpg" alt="Card image" align="center" style="width:80%;margin-top: -10px;">-->
+                      <div class="card-body">
+                        <div class="text-info text-center ">
+                          <h5 ><strong>Get Started with Partial Assessment</strong></h5>
+                          <hr>
+                        </div>
+                        <h6 class="card-title animated bounce delay-1s slower text-success">Enter the Area below</h6>
+                        <p class="card-text"><input type="number" name="" id="areatxt" class="form-control" placeholder="Type the Area here..."></p>
+
+                        <h6 class="card-title animated bounce delay-1s slower text-success">Enter the Latitude below</h6>
+                        <p class="card-text"><input type="number" name="" id="latitude1" class="form-control" placeholder="Type the Latitude here..."></p>
+                        <a href="#" class="btn btn-info secwigt animated heartBeat delay-4s slow"><i class="fa fa-hand-pointer-o mr-2" aria-hidden="true"></i>Partial Assess</a>
+                      </div>
+                    </div>
+        
+                </div>
+
+                 <!--Side floating -->
+                    <div class="first sidebtn animated  heartBeat delay-4s slower" style="background-color: rgb(78, 126, 2);position: fixed;top:20%;right: 0%;padding:0%;color: white;transition:all 3s;display:none" >
+                        <h4  style=" writing-mode: vertical-rl;text-orientation:upright;margin: 2px;">ASSESS</h4>
+                    </div>
+
+                    <div class="card container first side-dialog fadeIn" style="position: fixed;top:19%;right: 0%;z-index: 1;width:315px;padding:0px;margin: 0px;display:none">
+                        <div class="card-header text-light bg-success ">Provide your new Area and Latitude <a href="#" class="close " data-dismiss="card" aria-label="close">&times;</a></div>
+                        <div class="card-body" style="padding: 10px;">
+
+                            <label class="text-left"><strong>Enter new House Area:</strong></label>
+                            <input type="number" name="" id="houseArea" class="form-control form-control-sm" placeholder="Type the area" style="width:65%">
+
+                            <label class="text-left"><strong>Enter new Latitude:</strong></label>
+                            <input type="number" name="" id="latitude2" class="form-control form-control-sm" placeholder="Type the Location latitude" style="width:65%">
+                          
+                            <br/>
+    
+                          
+                        <!--<input type="text" name="" id="watchSelectedValue" class="form-control form-control-sm " disabled placeholder="0">-->
+                            
+                            <button type="button" class="btn btn-success generate " >Partial Assess</button>
+                            <button type="button" class="btn btn-primary modal-result" data-toggle="modal" >full Assess Report</button>
+                          </div>
+                        <!--<div class="card-footer">Footer</div>-->
+                      </div>
+                <!--/Side floating -->
+           
+
+        
+        <!--/first widget-->
+
+
+        <div class="second-widget" style="display: none;">
+
+            <div class="card mt-5">
+                <div class="card-header bg-secondary text-light text-center">Generation for Sustainable Green Building Parameters</div>
+                <div class="card-body">
+                    <div class="container form-group form-box" style="width:100%">
+                        <form action="">
+                          <!--   <label class="text-left"><strong>Enter new House Area:</strong></label>
+                            <input type="number" name="" id="houseArea" class="form-control form-control-sm" placeholder="Type the area" style="width:33%">
+
+                            <label class="text-left"><strong>Enter new Latitude:</strong></label>
+                            <input type="number" name="" id="houseArea" class="form-control form-control-sm" placeholder="Type the Location latitude" style="width:33%">
+                          
+                            <br/>
+    
+                          
+                        <input type="text" name="" id="watchSelectedValue" class="form-control form-control-sm " disabled placeholder="0">
+                            
+                            <button type="button" class="btn btn-success generate" >Assess</button>
+                        -->
+
+                       
+                            <hr>
+                        </form>
+    
+                        <h4 class="resultBorder p-2">Sustainable Parameter Results</h4>
+                        
+                           
+                            <hr>
+                           <!--Assessment-->
+    
+                           <div id="accordion">
+                            <div class="card">
+                            <div class="card-header" id="headingOne">
+                                <h5 class="mb-0">
+                                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                  <i class="fa fa-sun-o mr-3" aria-hidden="true"></i> Energy Performance Criteria 
+                                </button>
+                                </h5>
+                            </div>
+                        
+                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                                <div class="card-body">
+                                
+                                
+                                    <!--enegy tabbed-->
+                                         <!-- Nav tabs -->
+                                         <ul class="nav nav-tabs" role="tablist">
+                                            <li class="nav-item">
+                                            <a class="nav-link active "  data-toggle="tab" href="#enegyPerform">Performance</a>
+                                            </li>
+                                            <li class="nav-item">
+                                            <a class="nav-link" data-toggle="tab" href="#energyEquip">Equipments</a>
+                                            </li>
+                                          </ul>
+                                          <!--tabbed contents-->
+
+                                          <div class="tab-content">
+                                                                  
+                                            <div id="enegyPerform" class="container tab-pane active"><br>
+                                            <h4 class="text-success">Energy Performance</h4>
+
+                                            <ul>
+                                                <li class="bullets">Energy Metering </li>
+                                                <li class="bullets">Energy metering systems installed to end uses. </li>
+                                                <li class="bullets">Annual energy use </li>
+                                                <li class="bullets">Household electric power consumption per person (kWh per capita) annually in Zambia is 671kWh</li>
+                                                <li class="bullets">The minimum electricity consumption for a family of 3</li>
+                                                <li class="bullets">The minimum electricity consumption for a family of 5</li>
+                                                <li class="bullets">The minimum electricity consumption for a family of 10</li>
+                                                <li class="bullets">Energy budget </li>
+                                                <li class="bullets">Prediction of operational energy consumption </li>
+                                                <li class="bullets">Reduce high energy demands by accurate measurement of the energy consumption of the building by end use.</li>
+                                                
+                                            </ul>
+
+
+
+                                            </div>
+                                            
+                                            <div id="energyEquip" class="container tab-pane fade"><br>
+                                            <h4 class="text-success">Energy Efficient Equipment </h4>
+                                            <ul>
+                                                <li class="bullets">Solar panels should face between  south and west</li>		
+                                                <li class="bullets">Pitch of solar panels between 30 to 45 degrees  or it can take the latitude angle of the position of the place </li>		
+                                                <li class="bullets">Lusaka latitude 15 degrees</li>		
+                                                <li class="bullets">Kitwe 12 degrees</li>		
+                                                <li class="bullets">Mpika 12 degrees</li>		
+                                                <li class="bullets">House of 50-150 sqm requires 12 solar panels 1x1.7m</li> 		
+                                                <li class="bullets">House of 150-250 sqm requires 18 solar panels 1x1.7m</li>		
+                                                <li class="bullets">House of 250-350 sqm required 24 solar panels </li>		
+                                                <li class="bullets">Above 350 sqm required 32 solar panels 1x 1.7m</li>		
+                                                <li class="bullets">Solar panel 1x 1.7m and total number of panels 4</li>		
+                                                <li class="bullets">Solar collectors should face true north but deviations of 45o  East and West is allowed </li>		
+                                                <li class="bullets">The pitch (angle from horizontal) of the solar collector should normally be latitude of the location plus 10 degrees</li>		
+                                                <li class="bullets">A standard 100-watt incandescent light bulb produces about 1,500 – 1,700 lumens.</li>		
+                                                <li class="bullets">LED bulb 13 W produces 1100 lumens </li>		
+                                                <li class="bullets">10W LED light bulb lights up 12 sqm	</li>	
+                                                <li class="bullets">15 sqm x 25= 375 W or 3750 Lumens 	</li>
+                                                <li class="bullets">Lumen outputs of fluorescent lamps 18 Watt/1150 Lumens</li> 		
+                                                <li class="bullets">Compact fluorescent lamps (CFLs) 40W</li>		
+                                                <li class="bullets">Luminous efficacy less than 50 lm/W.</li>		
+                                                <li class="bullets">Should not be exceeded lighting power density target of 5W/m2 </li>		
+                                                <li class="bullets">Low level LED lighting linked to motion sensors for external lighting</li> 		
+                                                
+                                            </ul>
+                                            <hr>
+                                            <div class="energy-results">
+
+                                              <h5>Assessment Results for the given:- <span class="text-info">Parameters;</span></h5>
+                                              <hr class="divider mb-2">
+                                              <strong>Area Specified: </strong><label ><span class="badge badge-success areaSpecified">0</span></label><br>
+                                              <strong>Solar Panels of 1*1.7m needed: </strong><label><span class="badge badge-secondary panelsNeeded">0</span></label><br>
+                                              <strong>Location Latitude Specified: </strong><label ><span class="badge badge-success latitudeSpecified">0</span></label><br>
+                                              <strong>Solar Collector Pitch[facing South]: </strong><label ><span class="badge badge-success latitudeSpecified">0</span></label><br>
+                                              <strong>Solar Collector Pitch[facing True North]: </strong><label ><span class="badge badge-success latitudePitch">0</span></label><br>
+                                              <strong>Led Bulb watts: </strong><label ><span class="badge badge-success bulbwatts">0</span></label><br>
+                                              <strong> watts or Lumens: </strong><label ><span class="badge badge-success wattslumens">0</span></label><br>
+                                          
+                                            </div><!--/energy-result-->
+                                        
+                                            </div>
+
+                                        </div>
+
+                                          <!--/tabbed contents-->
+                                          
+                                    <!--/energy tabbed-->
+                            
+                            
+                            
+                                </div>
+                            </div>
+                            </div>
+              
+              
+                            <div class="card mt-3">
+                            <div class="card-header" id="headingTwo">
+                                <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                  <i class="fa fa-bus mr-3" aria-hidden="true"></i> Envelop Insulation <span class="text-secondary">[ <strong class="text-danger">* Please select materials to be used from checkbox below inside this Section</strong> ]</span>
+                                </button>
+                                </h5>
+                            </div>
+                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                                <div class="card-body">
+                                    <ul>
+                                            <li class="li-header">Insulation used to reduce the heat flow through the building envelope</li>		
+                                            <li class="tick"><input type="checkbox" name="insulation"  value="Use of stabilized earth blocks" class="mr-2">Use of stabilized earth blocks</li>		
+                                            <li><input type="checkbox" name="insulation"  value="Wool brick -wool, seaweed and clay" class="mr-2">Wool brick -wool, seaweed and clay</li>		
+                                            <li><input type="checkbox" name="insulation"  value="Concrete blocks with lime, gysum, blast furnace slag, waste wood fibre, rice husk ash" class="mr-2">Concrete blocks with lime, gysum, blast furnace slag, waste wood fibre, rice husk ash</li>		
+                                            <li><input type="checkbox" name="insulation"  value="Stablized compressed earth block" class="mr-2">Stablized compressed earth block	</li>	
+                                            <li><input type="checkbox" name="insulation"  value="Stablized mud blocks" class="mr-2">Stablized mud blocks </li>		
+                                            <li><input type="checkbox" name="insulation"  value="Clay, flyash burnt bricks" class="mr-2">Clay, flyash burnt bricks	</li>	
+                                            <li><input type="checkbox" name="insulation"  value="Pre-cast stone block (waste stone pieces with lean cement concrete" class="mr-2">Pre-cast stone block (waste stone pieces with lean cement concrete </li>		
+                                            <li><input type="checkbox" name="insulation"  value="Lato bricks(lateritic soil and cement or lime" class="mr-2">Lato bricks(lateritic soil and cement or lime	</li>	
+                                            <li><input type="checkbox" name="insulation"  value="Composite ferro cement system (rich mortar reinforced with chicken mesh and welded wire mesh)" class="mr-2">Composite ferro cement system (rich mortar reinforced with chicken mesh and welded wire mesh)</li>		
+                                            <li><input type="checkbox" name="insulation"  value="Use of thatch" class="mr-2">Use of thatch</li>		
+                                            <li><input type="checkbox" name="insulation"  value="Mud blocks" class="mr-2">Mud blocks</li> 		
+                                            <li><input type="checkbox" name="insulation"  value="Use of bamboo" class="mr-2">Use of bamboo</li>		
+                                            <li>Minimum total R-value for walls to be 2.8 K·m²/W</li>		
+                                            <li><input type="checkbox" name="insulation"  value="In hot climate use stone or tiles floor finish" class="mr-2">In hot climate use stone or tiles floor finish</li> 		
+                                            <li><input type="checkbox" name="insulation"  value="Brick or Block with recycled flyash" class="mr-2">Brick or Block with recycled flyash	</li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                            </div>
+              
+              
+                            <div class="card mt-3">
+                            <div class="card-header" id="headingThree">
+                                <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                  <i class="fa fa-envira mr-3" aria-hidden="true"></i>   Roofing Materials <span class="text-secondary">[ <strong class="text-danger">* Please select Roof materials to be used from checkbox below inside this Section</strong> ]</span>
+                                </button>
+                                </h5>
+                            </div>
+                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                                <div class="card-body">
+                                    
+                                    <ul>
+                                        <li>Roof absorbency rate non porous roofing sheets 0.1-0.5 %</li>		
+                                        <li>Minimum total R-value (for a roof with a solar absorbance of more than 0.55) to be 4.1 K·m²/W</li>		
+                                        <li><b>Absorbency values:</b> </li>		
+                                        <li>Off White 0.35, Light Cream 0.30</li>		
+                                        <li><input type="checkbox" name="roof" id="roof" value="In areas where there is clay use clay tiles" class="mr-2">In areas where there is clay use clay tiles </li>		
+                                        <li><input type="checkbox" name="roof" id="roof" value="In areas where there is bamboo use bamboo as roofing members" class="mr-2">In areas where there is bamboo use bamboo as roofing members</li>		
+                                        <li><input type="checkbox" name="roof" id="roof" value="Thatch" class="mr-2">Thatch</li>		
+                                        <li><input type="checkbox" name="roof" id="roof" value="Clay tile roof" class="mr-2">Clay tile roof</li>		
+                                        <li><input type="checkbox" name="roof" id="roof" value="Gypsum sisal conoid" class="mr-2">Gypsum sisal conoid </li>		
+                                        <li><input type="checkbox" name="roof" id="roof" value="Bamnboo and wood shingles" class="mr-2">Bamnboo and wood shingles</li> 		
+                                        <li><input type="checkbox" name="roof" id="roof" value="Corrugated fibre concrete sheets" class="mr-2">Corrugated fibre concrete sheets</li> 		
+                                             
+                                    </ul>
+
+                                </div>
+                            </div>
+                            </div>
+              
+                            <div class="card mt-3">
+                              <div class="card-header" id="headingThree">
+                                  <h5 class="mb-0">
+                                  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#cooling" aria-expanded="false" aria-controls="collapseThree">
+                                    <i class="fa fa-envira mr-3" aria-hidden="true"></i>   Heat and Cooling Systems
+                                  </button>
+                                  </h5>
+                              </div>
+                              <div id="cooling" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                                  <div class="card-body">
+                                    <ul>
+                                        <li class="bullets">Increased cross ventilation, thermal mass and ceiling fans should be used rather than air conditioning</li>		
+                                        <li class="bullets">Solar direct or indirect gain systems can be used for heating</li>		
+                                       <li class="bullets"> Biomass heating be used for heating and cooking </li>		
+                                       <li class="bullets"> Passive environmental control System </li>		
+                                       <li class="bullets"> Cross ventilation 		</li>
+                                       <li class="bullets"> Openings on two sides of a space </li>		
+                                       <li class="bullets"> Breeze paths are directly across a building or space and pass through the openings on opposite windows</li>		
+                                       <li class="bullets"> The area of glazing within a façade not exceed 30%. </li>		
+                                       <li class="bullets"> Glazing should be limited on east and west facades to avoid unwanted heat gains</li>		
+                                        
+                                    </ul>
+
+                                    <hr>
+                                    <div class="cooling-results">
+                                      <h5>Heat and Cooling Assessment Results for the given:- <span class="text-info">Parameters;</span></h5>
+                                      <hr class="divider mb-2">
+                                      <strong>Area Specified: </strong><label ><span class="badge badge-success areaSpecified">0</span></label><br>
+                                      <strong>30% Of Grazing Area: </strong><label ><span class="badge badge-success grazingArea">0</span></label><br>
+
+                                    </div>
+
+
+                                  </div>
+                              </div>
+                              </div>
+              
+              
+                              <div class="card mt-3">
+                                  <div class="card-header" id="headingThree">
+                                      <h5 class="mb-0">
+                                      <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#Renewable" aria-expanded="false" aria-controls="collapseThree">
+                                        <i class="fa fa-envira mr-3" aria-hidden="true"></i>   Renewable energy <span class="text-secondary">[ <strong class="text-danger">* Please select some options to be used from checkbox below inside this Section</strong> ]</span>
+                                      </button>
+                                      </h5>
+                                  </div>
+                                  <div id="Renewable" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                                      <div class="card-body">
+                                            <ul>
+                                                <li><input type="checkbox" name="renewable"  value="Buildings uses electricity generated from renewable sources i.e wind, sun." class="mr-2">Buildings uses electricity generated from renewable sources i.e wind, sun.</li>  	
+                                                <li><input type="checkbox" name="renewable"  value="Solar water Heater use" class="mr-2">Solar water Heater use</li> 	
+
+                                            </ul>
+                                      </div>
+                                  </div>
+                                  </div>
+              
+                                  <div class="card mt-3">
+                                      <div class="card-header" id="headingThree">
+                                          <h5 class="mb-0">
+                                          <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#Daylighting" aria-expanded="false" aria-controls="collapseThree">
+                                            <i class="fa fa-envira mr-3" aria-hidden="true"></i>  Daylighting <span class="text-secondary">[ <strong class="text-danger">* Please select Daylight Option(s) to be used from checkbox below inside this Section</strong> ]</span>
+                                          </button>
+                                          </h5>
+                                      </div>
+                                      <div id="Daylighting" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                                          <div class="card-body">
+                                              <ul>
+                                                  <li class="bullets">20% window to floor area =200 lux under an overcast sky (put a formula so that one can calculate how much day light they need)</li>		
+                                                 <li class="bullets"> Acceptable Daylighting bewteen 200 to 500 lumens </li>		
+                                                  <li class="bullets">windows should be at least 50% of the window wall width and, secondly, that room depth should be no greater than twice the room width for full width windows</li> 		
+                                                 <li class="bullets"> depth of the building not be more than 12 metres for  good cross flow of air</li>		
+                                                 <li class="bullets"> Light coloured walls/ceiling/ roofing sheets </li> 		
+                                                 <li class="bullets"> building envelopes should be light coloured</li>		
+                                                 <li class="bullets"> fins and overhangs on northern facades </li>		
+                                                 <li class="bullets"> vertical moveable elements, such as louvers,on east and west facades</li>		
+                                                 <li ><input type="checkbox" name="daylight"  value="Reflectance pure white, light grey, light brown and light blue=70-90 % reflectance" class="mr-2"> Reflectance pure white, light grey, light brown and light blue=70-90 % reflectance </li>		
+                                                 <li ><input type="checkbox" name="daylight"  value="Reflectance medium grey, medium green, medium yellow and brown= 30-60% reflectance" class="mr-2"> Reflectance medium grey, medium green, medium yellow and brown= 30-60% reflectance</li>		
+                                                 <li ><input type="checkbox" name="daylight"  value="Reflectance medium blue and dar grey =10-20% reflectance" class="mr-2">Reflectance medium blue and dar grey =10-20% reflectance</li> 		
+                                                 <li ><input type="checkbox" name="daylight"  value="Reflectance darker green, dark blue, dark wood paneling = 5-10% reflectance" class="mr-2"> Reflectance darker green, dark blue, dark wood paneling = 5-10% reflectance</li>
+                                                 <li ><input type="checkbox" name="daylight"  value="PVC tiles cream and light grey carpet= 45% reflectance" class="mr-2"> PVC tiles cream and light grey carpet= 45% reflectance</li> 		
+
+                                              </ul>
+
+
+                                              <hr>
+
+                                              <div class="daylight-results">
+
+                                                <h5>Daylighting Assessment Results for the given:- <span class="text-info">Parameters;</span></h5>
+                                                <hr class="divider mb-2">
+                                                <strong>Area Specified: </strong><label ><span class="badge badge-success areaSpecified">0</span></label><br>
+                                                <strong>Amount of light per Area: </strong><label><span class="badge badge-secondary luxAcquired">0</span></label><br>
+                                                <strong>Window size should be: </strong><label ><span class="badge badge-success window">0</span></label><br>
+                                                
+                                                 <div style="display: none;">
+
+
+                                                   <label class="text-left"><strong>Select Reflectance material:</strong></label>
+                                                     <select name="" id="reflectanceMaterial">
+                                                         <option value="0%">Select material</option>
+                                                         <option value="70-90%">pure white, light grey, light brown and light blue</option>
+                                                         <option value="30-60%">medium grey, medium green, medium yellow and brown</option>
+                                                         <option value="10-20%">medium blue and dar grey</option>
+                                                         <option value="5-10%">darker green, dark blue, dark wood paneling </option>
+                                                         <option value="45%">PVC tiles cream and light grey carpet</option>
+                                                     </select>
+                                                     <input type="text" name="" id="reflectanceSelectedValue" class="form-control form-control-sm " disabled placeholder="0" style="width:20%">
+                                                    
+                                                 </div>
+                                                 
+                                                  <br>
+                                              </div>
+                                          
+                                            
+                                          </div>
+                                      </div>
+                                      </div>
+              
+                                      <div class="card mt-3">
+                                          <div class="card-header" id="headingThree">
+                                              <h5 class="mb-0">
+                                              <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#Water" aria-expanded="false" aria-controls="collapseThree">
+                                                <i class="fa fa-envira mr-3" aria-hidden="true"></i>  Water <span class="text-secondary">[ <strong class="text-danger">* Please select some options to be used from checkbox below inside this Section</strong> ]</span>
+                                              </button>
+                                              </h5>
+                                          </div>
+                                          <div id="Water" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                                              <div class="card-body">
+                                                <ul>
+                                                    <li class="bullets">ideally between 80-100 litres of water per day per capita</li>		
+                                                    <li class="bullets">Specification of water meters on the mains water supply to encourage water consumption management and monitoring to reduce the impacts of inefficiencies and leakage.</li>		
+                                                    <li class="bullets">Less portable water</li>		
+                                                    <li class="bullets">building uses less potable water in operation than  the potable water baseline for that building type.	</li>	
+                                                    <li class="bullets">Efficient flush with capability not exceed 3L for a 1/2 flush) and 6L for a full flush. </li>		
+                                                    <li class="bullets">Flush toilets using grey water sourced from hand washing/shower/ laundry	</li>	
+                                                    <li class="bullets">Low flow rate of taps </li>		
+                                                    <li><input type="checkbox" name="water"  value="use of grey water in gardens" class="mr-2">use of grey water in gardens </li>		
+                                                    <li><input type="checkbox" name="water"  value="Reduced length of pipping" class="mr-2">Reduced length of pipping </li>		
+                                                    <li><input type="checkbox" name="water"  value="Rain water harvesting" class="mr-2">Rain water harvesting </li>		
+                                                    <li class="bullets">On average 600mm of rain on a house 200 sqm will produce 120,000 liters of water annually</li>		
+                                                    <li><input type="checkbox" name="water"  value="Hard surface rainwater runoff from hard surfaces" class="mr-2">Hard surface rainwater runoff from hard surfaces</li> 		
+                                                    <li><input type="checkbox" name="water"  value="Landscape surface runoff capture from soft landscaping and reused" class="mr-2">Landscape surface runoff capture from soft landscaping and reused</li>		
+                                                    <li><input type="checkbox" name="water"  value="Water efficient devices" class="mr-2">Water efficient devices</li>		
+                                                    <li><input type="checkbox" name="water"  value="Wastage reduced by reducing the flow rate of taps should not exceed 6L/minute." class="mr-2">Wastage reduced by reducing the flow rate of taps should not exceed 6L/minute.</li>		
+                                                    <li><input type="checkbox" name="water"  value="press-button operation taps can be used to limit the duration of flows." class="mr-2">press-button operation taps can be used to limit the duration of flows. </li>		
+
+                                                </ul>  
+                                                
+                                                
+                                                <hr>
+
+                                                <div class="water-results">
+
+                                                  
+                                                  <h5>Water Assessment Results for the given:- <span class="text-info">Parameters;</span></h5>
+                                                  <hr class="divider mb-2">
+                                                  <strong>Area Specified: </strong><label ><span class="badge badge-success areaSpecified">0</span></label>
+                                                  <br>
+                                                  <strong>Rain Amount for 600mm: </strong><label><span class="badge badge-success rainAmount">0</span></label>
+                          
+                                                  <br>
+                                                  <strong>Average Amount of water per day: </strong><label><span class="badge badge-success waterAmount">0</span></label>
+                                                
+                                                </div>
+                                              
+                                              </div>
+                                          </div>
+                                          </div>
+              
+                                          <div class="card mt-3">
+                                              <div class="card-header" id="headingThree">
+                                                  <h5 class="mb-0">
+                                                  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#Suistanable" aria-expanded="false" aria-controls="collapseThree">
+                                                    <i class="fa fa-envira mr-3" aria-hidden="true"></i> Suistanable Site <span class="text-secondary">[ <strong class="text-danger">* Please select materials to be used from checkbox below inside this Section</strong> ]</span>
+                                                  </button>
+                                                  </h5>
+                                              </div>
+                                              <div id="Suistanable" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                                                  <div class="card-body">
+                                                        <ul>
+                                                            <li><input type="checkbox" name="site"  value="Availability of Brown field redevelopment site:30-60%" class="mr-2"> Availability of brown field redevelopment site		(should be able to choose)</li>
+                                                           
+                                                            <li><input type="checkbox" name="site"  value="Availability of Green field redevelopment site:70-90%" class="mr-2">Availability of green field site</li> 
+                                                             		
+                                                            <li class="bullets">Construction activity to prevent pollution</li> 		
+                                                            <li><input type="checkbox" name="site"  value="Public transportation access 400 Meters" class="mr-2"> Public transportation access 400 Meters</li> 		
+                                                           <li><input type="checkbox" name="site"  value="Public transportation access 1KM" class="mr-2"> Public transportation access 1KM 		(should be able to choose)</li>
+                                                           <li><input type="checkbox" name="site"  value="Public transportation access 2KM" class="mr-2"> Public transportation access 2KM </li>		
+                                                           <li class="bullets"> Reducing emissions associated with transportation</li>		
+                                                           <li class="bullets"> Planting sustainable landscapes</li>		
+                                                           <li class="bullets"> Protecting surrounding habitats</li>		
+                                                           <li class="bullets"> To limit disruption and pollution of natural water flows by managing storm-water run-off.</li> 		
+                                                           <li class="bullets"> Reducing the heat island </li>		
+                                                          <li class="bullets"> Eliminating light pollution</li>		
+                                                           <li class="bullets"> preservation of trees on the site </li>		
+                                                           <li class="bullets"> functional planting for food, shelter, bio-gas, and to manage storm water run off.</li> 		
+                                                           <li><input type="checkbox" name="site"  value="Use of composite toilets" class="mr-2"> Use of composite toilets </li>		
+                                                            design for bio diversity 		
+                                                           <li class="bullets"> Ecological risks and opportunities </li>		
+                                                           <li class="bullets">  20% of the site should have vegetation in comparison to the total footprint area of the building		(to be calculated for different sites)</li> 
+                                                           <li class="bullets"> Local character improvement </li>		
+                                                           <li class="bullets"> Air/ noise pollution</li>		
+                                                            <li class="bullets"> Total power of external lighting in housing not more than 40W per unit	</li>	
+                                                            <li class="bullets">Ecological value biodiversity policy</li>		
+                                                            <li class="bullets">maintenance program	</li>	
+                                                            <li class="bullets">Habitats for animals </li>		
+                                                            
+                                                        </ul>
+
+                                                        <hr>
+
+                                                        <h5>Suistanable site Assessment Results for the given:- <span class="text-info">Parameters;</span></h5>
+                                                        <hr class="divider mb-2">
+                                                       
+                                                       
+                                                        <div style="display: none;">
+
+                                                          
+                                                           <label class="text-left"><strong>Select Available field:</strong></label>
+                                                   <select name="" id="fieldSelect">
+   
+                                                       <option value="0%">Select field</option>
+                                                       <option value="70-90%">green field site </option>
+                                                       <option value="30-60%">brown field site</option>
+                                                      
+                                                                                                           
+                                                   </select>
+                                                   <input type="text" name="" id="fieldSelectedValue" class="form-control form-control-sm " disabled placeholder="0" style="width:20%">
+                                                   <br>
+   
+   
+                                                   <label class="text-left"><strong>Select Public Transport access :</strong></label>
+                                                   <select name="" id="transportSelect">
+   
+                                                       <option value="0%">Select Distance</option>
+                                                       <option value="70-90%">400M </option>
+                                                       <option value="30-60%">1KM</option>
+                                                       <option value="30-60%">2KM</option>
+                                                                                                           
+                                                   </select>
+                                                   <input type="text" name="" id="transportSelectedValue" class="form-control form-control-sm " disabled placeholder="0" style="width:20%">
+                                                   
+
+                                                       </div>
+                                                       
+                                                <br>
+                                                <strong>Area Specified: </strong><label ><span class="badge badge-success areaSpecified">0</span></label><br>
+                                                <strong>20% of vegetable Area: </strong><label><span class="badge badge-success vegetableArea">0</span></label>
+
+
+
+
+
+
+                                                  </div>
+                                              </div>
+                                              </div>
+              
+                                              <div class="card mt-3 mb-3">
+                                                  <div class="card-header" id="headingThree">
+                                                      <h5 class="mb-0">
+                                                      <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#Management" aria-expanded="false" aria-controls="collapseThree">
+                                                        <i class="fa fa-envira mr-3" aria-hidden="true"></i> Management Performance Criteria
+                                                      </button>
+                                                      </h5>
+                                                  </div>
+                                                  <div id="Management" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                                                      <div class="card-body">
+                                                      
+                                                          
+                                                          <!-- Nav tabs -->
+                                                              <ul class="nav nav-tabs" role="tablist">
+                                                                  <li class="nav-item">
+                                                                  <a class="nav-link active" data-toggle="tab" href="#home">Project</a>
+                                                                  </li>
+                                                                  <li class="nav-item">
+                                                                  <a class="nav-link" data-toggle="tab" href="#menu1">Waste Management</a>
+                                                                  </li>
+                                                                  <li class="nav-item">
+                                                                  <a class="nav-link" data-toggle="tab" href="#menu2">Sustainable Building Materials</a>
+                                                                  </li>
+                                                                  <li class="nav-item">
+                                                                  <a class="nav-link" data-toggle="tab" href="#menu3">Health and Well being</a>
+                                                                  </li>
+                                                                  <li class="nav-item">
+                                                                  <a class="nav-link" data-toggle="tab" href="#menu4">Transport</a>
+                                                                  </li>
+                                                                  <li class="nav-item">
+                                                                  <a class="nav-link" data-toggle="tab" href="#menu5">Pollution/Waste</a>
+                                                                  </li>
+              
+                                                                  <li class="nav-item">
+                                                                      <a class="nav-link" data-toggle="tab" href="#menu6">Economics</a>
+                                                                  </li>
+              
+                                                                  <li class="nav-item">
+                                                                      <a class="nav-link" data-toggle="tab" href="#menu7">Education</a>
+                                                                  </li>
+              
+                                                                  <li class="nav-item">
+                                                                      <a class="nav-link" data-toggle="tab" href="#menu8">Social Cohesion</a>
+                                                                  </li>
+              
+                                                                  <li class="nav-item">
+                                                                      <a class="nav-link" data-toggle="tab" href="#menu9">Innovation</a>
+                                                                  </li>
+              
+              
+                                                              </ul>
+              
+                                                              <!-- Tab panes -->
+                                                              <div class="tab-content">
+                                                                  
+                                                                  <div id="home" class="container tab-pane active"><br>
+                                                                  <h5 class="text-success">Project</h5><span class="text-secondary">[ <strong class="text-danger">* Please select options to be used from checkbox below inside this Section</strong> ]</span>
+                                                                    <ul>
+                                                                        <li class="bullets">Project brief and design </li>		
+                                                                        <li><input type="checkbox" name="project" id="project" value="Life cycle cost and services life planning" class="mr-2">life cycle cost and services life planning </li>		
+                                                                        <li class="bullets">commissioning and handover 	</li>	
+                                                                        <li class="bullets">After care 	</li>	
+                                                                        <li ><input type="checkbox" name="project" id="project" value="Housing Manual" class="mr-2"> Housing Manual </li>		
+                                                                        <li><input type="checkbox" name="project" id="project" value="Occupation Induction" class="mr-2">Occupation Induction</li>		
+                                                                        <li class="bullets"> Reducing buildings’ environmental life cycle impacts through conducting Life Cycle Assessment and integrating its outcomes in the design decision-making process.</li>		
+                                                                        <li class="bullets">To encourage availability of robust and comparable data on the impacts of construction products by rewarding the specification of products with environmental products declarations.</li>		
+                                                                        <li class="bullets">source of products and the intermediary companies processing and transporting the product to site.</li>		
+                                                                        <li class="bullets"> designing for durability and protection from degradation and specifying appropriate construction products.</li>		
+                                                                       <li class="bullets"> reduction of environmental impacts through optimising the use of materials during all stages of the project.</li>		
+                                                                        
+                                                                    </ul>
+                                                                  </div>
+                                                                  
+                                                                  <div id="menu1" class="container tab-pane fade"><br>
+                                                                  <h5>Waste Management</h5>
+                                                                    <ul>
+                                                                       <li class="bullets"> Reduce Waste Sent to Landfill by 25% to 100%</li> 
+                                                                       <li class="bullets"> Local production</li>
+                                                                       <li class="bullets"> Enviro. Prefered products</li> 
+                                                                        
+                                                                    </ul>
+                                                                  </div>
+                                                                  
+                                                                  
+                                                                  <div id="menu2" class="container tab-pane fade"><br>
+                                                                  <h5>Sustainable Building Materials</h5>
+                                                                    <ul>
+                                                                       <li class="bullets"> Building reuse </li>
+                                                                        <li class="bullets">Low emnbodied energy materials </li>
+                                                                       <li class="bullets"> Recycling</li>
+                                                                       <li class="bullets"> Reduced use of materials</li> 
+                                                                       <li class="bullets"> Renewable Source </li>
+                                                                       <li class="bullets"> Durability and ressillience</li> 
+                                                                       <li class="bullets"> Building Life Cycle Assesssment </li>
+                                                                       <li class="bullets"> Low health risk materials </li>
+                                                                        
+                                                                    </ul>
+                                                                  </div>
+                                                                      
+                                                                      <div id="menu3" class="container tab-pane fade"><br>
+                                                                      <h5>Health and Well being</h5>
+                                                                        <ul>
+                                                                           <li class="bullets"> Visual comfort 		
+                                                                           <li class="bullets"> good practice daylight factors, reduced glare and having an adequate view out.</li> 		
+                                                                           <li class="bullets">Indoor quality 		
+                                                                           <li class="bullets">Managing harmful emissions from construction products with the appropriate standards. – quality.</li>		
+                                                                           <li class="bullets">Specifying an appropriate ventilation strategy that maintains good indoor air</li>		
+                                                                           <li class="bullets">Thermal comfort</li> 		
+                                                                           <li class="bullets">Processes to monitor and measure the levels of fresh air in regulary occupied space and maintain carbon dioxide concentrations at best  practice levels.</li> 		
+                                                                          <li class="bullets"> Security</li>		
+                                                                           <li class="bullets">Safe and health surroundings</li>		
+                                                                           <li class="bullets"> best practice acoustic performance levels appropriate to the functional activities in occupied spaces.</li> 		
+                                                                           <li class="bullets"> monitoring of noise from building systems and exterior sources, and the maintenance of such at appropriate levels.</li>		
+                                                                           <li class="bullets">green outdoor space</li> 		
+                                                                           <li class="bullets"> reduce the health risks to building occupants from the hazardous materials usch us asbestos, lead and polychlorinated biphenyls</li>		
+                                                                           
+                                                                        </ul>
+                                                                      </div>
+                                                                      
+                                                                      <div id="menu4" class="container tab-pane fade"><br>
+                                                                      <h5>Transport</h5><span class="text-secondary">[ <strong class="text-danger">* Please select options to be used from checkbox below inside this Section</strong> ]</span>
+                                                                        <ul>
+                                                                            <li> Encourage the use of alternative transportation modes such as public transport, walking or cycling.</li>		
+                                                                            <li><input type="checkbox" name="transport"  class="mr-2" value="Building is located 100, or less metres to disabled accessible public transport">Building is located 100, or less metres to disabled accessible public transport </li>		
+                                                                            <li><input type="checkbox" name="transport"  class="mr-2" value="Compact development">Compact development </li>		
+                                                                            <li><input type="checkbox" name="transport"  class="mr-2" value="Access to facilities">Access to facilities </li>		
+                                                                           <li><input type="checkbox" name="transport"  class="mr-2" value="Locating housing near employment, education, health and recreation facilities, shops, banking, post offices and telecommunications, business and government services enables households to access this by walking, or cycling, avoiding the need for cars."> Locating housing near employment, education, health and recreation facilities, shops, banking, post offices and telecommunications, business and government services enables households to access this by walking, or cycling, avoiding the need for cars.</li>  		
+                                                                           <li><input type="checkbox" name="transport"  class="mr-2" value="Proximity to amenities"> Proximity to amenities</li> 		
+                                                                           <li><input type="checkbox" name="transport"  class="mr-2" value="Housing should be located near good public transport nodes, including bus, train and bus rapid transport systems (BRT). Walking distances between public transport nodes and housing should be not be over 2 km and ideally should be less than 400 m."> Housing should be located near good public transport nodes, including bus, train and bus rapid transport systems (BRT). Walking distances between public transport nodes and housing should be not be over 2 km and ideally should be less than 400 m.</li>   		
+                                                                           <li><input type="checkbox" name="transport"  class="mr-2" value="Pedestrian and cycling routes"> Pedestrian and cycling routes </li>		
+                                                                           <li><input type="checkbox" name="transport"  class="mr-2" value="Provision for cycling, safe parking areas and safe routes encourage cycling as an alternative to the use of motorised vehicles"> Provision for cycling, safe parking areas and safe routes encourage cycling as an alternative to the use of motorised vehicles</li>		
+                                                                           <li><input type="checkbox" name="transport"  class="mr-2" value="Safe movement in buildings"> Safe movement in buildings</li> 		
+                                                                            
+                                                                        </ul>
+                                                                      </div>
+                                                                      
+                                                                      <div id="menu5" class="container tab-pane fade"><br>
+                                                                      <h5>Pollution / Waste</h5><span class="text-secondary">[ <strong class="text-danger">* Please select options to be used from checkbox below inside this Section</strong> ]</span>
+                                                                        <ul>
+                                                                           <li><input type="checkbox" name="pollution"  value="Toxic waste" class="mr-2"> Toxic waste </li>		
+                                                                           <li><input type="checkbox" name="pollution"  value="Minimise emissions from refrigerants" class="mr-2"> Minimise emissions from refrigerants</li>		
+                                                                           <li><input type="checkbox" name="pollution"  value="Flood and surface water management" class="mr-2"> Flood and surface water management</li>		
+                                                                           <li><input type="checkbox" name="pollution"  value="Refrigerants have zero ozone depletion potential, and low global warming potential." class="mr-2"> Refrigerants have zero ozone depletion potential, and low global warming potential.</li> 		
+                                                                           <li><input type="checkbox" name="pollution"  value="Construction waste can be minimized through designs based on product and material sizes which minimize cutting and waste" class="mr-2"> Construction waste can be minimized through designs based on product and material sizes which minimize cutting and waste</li>		
+                                                                           <li><input type="checkbox" name="pollution"  value="Sewage waste to be reused and safe disposal" class="mr-2"> Sewage waste to be reused and safe disposal </li>		
+                                                                           <li><input type="checkbox" name="pollution"  value="Reduced loss of land to landfill" class="mr-2"> Reduced loss of land to landfill</li>		
+                                                                           <li><input type="checkbox" name="pollution"  value="Appropriate waste receptacles should be located at the source of waste to ensure waste is not ‘spoilt’ and reduced in value by being mixed with other waste" class="mr-2"> Appropriate waste receptacles should be located at the source of waste to ensure waste is not ‘spoilt’ and reduced in value by being mixed with other waste</li>		
+                                                                           <li><input type="checkbox" name="pollution"  value="Recycling storage spaces should be located near public highways so that these can be easily accessed by recycling contractors" class="mr-2"> Recycling storage spaces should be located near public highways so that these can be easily accessed by recycling contractors</li>		
+                                                                            
+                                                                        </ul>
+                                                                      </div>
+              
+                                                                      <div id="menu6" class="container tab-pane fade"><br>
+                                                                          <h5>Economics</h5><span class="text-secondary">[ <strong class="text-danger">* Please select options to be used from checkbox below inside this Section</strong> ]</span>
+                                                                            <ul>
+                                                                                <li><input type="checkbox" name="economics"  value="Local building production" class="mr-2"> Local building production </li>		
+                                                                                <li><input type="checkbox" name="economics"  value="Diversified local economic basis" class="mr-2">Diversified local economic basis </li>		
+                                                                                <li><input type="checkbox" name="economics"  value="Local maintenance" class="mr-2">Local maintenance </li>		
+                                                                                <li><input type="checkbox" name="economics"  value="The economy of an area can be stimulated and sustained by buildings that make use and develop local skills and resources." class="mr-2">The economy of an area can be stimulated and sustained by buildings that make use and develop local skills and resources.</li> 		
+                                                                                <li><input type="checkbox" name="economics"  value="Local building production" class="mr-2">Local building production </li>		
+                                                                                <li><input type="checkbox" name="economics"  value="Maintenance works to be carried out by local contractors" class="mr-2">Maintenance works to be carried out by local contractors </li>		
+                                                                                
+                                                                            </ul>
+                                                                      </div>
+              
+                                                                      <div id="menu7" class="container tab-pane fade"><br>
+                                                                          <h5>Education</h5><span class="text-secondary">[ <strong class="text-danger">* Please select options to be used from checkbox below inside this Section</strong> ]</span>
+                                                                            <ul>
+                                                                                <li><input type="checkbox" name="education"  value="Contractor Education" class="mr-2"> Contractor Education </li>		
+                                                                                <li><input type="checkbox" name="education"  value="Client Maintenance Education" class="mr-2">Client Maintenance Education </li>		
+                                                                                <li><input type="checkbox" name="education"  value="Learning Environment with access to internet" class="mr-2">Learning Environment with access to internet</li>		
+                                                                                <li><input type="checkbox" name="education"  value="Improved education levels and therefore likelihood of employment and ability to succeed in entrepreneurial activities" class="mr-2">Improved education levels and therefore likelihood of employment and ability to succeed in entrepreneurial activities</li>		
+                                                                                <li><input type="checkbox" name="education"  value="Skills targets can be determined, and set, as part of a construction tender construction programme within the local area and within the industry." class="mr-2">Skills targets can be determined, and set, as part of a construction tender construction programme within the local area and within the industry.</li> 		
+                                                                                 <li><input type="checkbox" name="education"  value="Basic Occupant's Manual and Public Awareness of GBRT uses and benefits" class="mr-2">Basic Occupant's Manual and Public Awareness of GBRT uses and benefits </li>		
+                                                                                
+                                                                            </ul>
+                                                                      </div>
+              
+                                                                      <div id="menu8" class="container tab-pane fade"><br>
+                                                                          <h5>Social Cohesion</h5><span class="text-secondary">[ <strong class="text-danger">* Please select options to be used from checkbox below inside this Section</strong> ]</span>
+                                                                            <ul>
+                                                                <li><input type="checkbox" name="social"  value="Stackholders involvment" class="mr-2"> Stackholders involvment</li> 		
+                                                                <li><input type="checkbox" name="social"  value="Resident organizations" class="mr-2">Resident organizations </li>		
+                                                                <li><input type="checkbox" name="social"  value="Social spaces such as parks, play grounds and sports fields can play an important role in encouraging social interaction and cohesion within communities. An appropriate number and type of social spaces should therefore be provided in and around the housing." class="mr-2">Social spaces such as parks, play grounds and sports fields can play an important role in encouraging social interaction and cohesion within communities. An appropriate number and type of social spaces should therefore be provided in and around the housing. </li>		
+                                                                <li><input type="checkbox" name="social"  value="Social facilities such as community centres and sports and recreation facilities can play an important role in enabling social interaction and cohesion." class="mr-2">Social facilities such as community centres and sports and recreation facilities can play an important role in enabling social interaction and cohesion.</li>		
+                                                                <li><input type="checkbox" name="social"  value="The involvement of users, local government, the contractor and local service providers can be used to support goals such as improved energy efficiency, increased recycling and local employment" class="mr-2">The involvement of users, local government, the contractor and local service providers can be used to support goals such as improved energy efficiency, increased recycling and local employment </li>		
+
+                                                                            </ul>
+                                                                      </div>
+              
+                                                                      <div id="menu9" class="container tab-pane fade"><br>
+                                                                          <h5>Innovation</h5>
+                                                                            <ul>
+                                                                        <li> sustainable designs and ideas</li> 		
+                                                                        <li>To support innovation within the construction industry through the recognition of sustainability-related benefits</li> 		
+
+                                                                            </ul>
+                                                                      </div>
+              
+                                                              </div>
+              
+                                                      </div>
+                                                  </div>
+                                                  </div>
+              
+              
+              
+              
+              
+                        </div>
+    
+                           <!--/Assessment-->
+                           
+    
+                          
+                            <hr>
+                            
+                            <button type="button" class="btn btn-success float-right clear">Clear</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="card-footer text-success text-center"><small>Copyright(c) 2020. All right Reserved </small></div>
+              </div>
+
+        </div>
+
+    </div>
+
+
+    <!--screen to print-->
+<div class="container mt-5" id="enegyPerform1">
+ 
+</div>
+    <!--/screen to print-->
+
+
+    <!-- The Report Modal -->
+
+  <div class="modal fade" id="myModal">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header bg-success">
+          <h4 class="modal-title text-light">ZIGBA MODEL Assessment Report</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body " id="print-view">
+          <div class="text-left">
+            <!--Contents to be printed-->
+
+            <div class="strong">Energy Performance
+              <hr>
+              <div class="energy-results-clone">
+
+              </div>
+              <hr>
+            </div>
+
+
+
+            <div class="strong">Envelop Insulation <span class="text-danger">[selected Option(s)]</span>
+              <hr>
+              <div class="insulation-list">
+                <ul class="insulation-result">
+
+                </ul>
+              </div>
+              <hr>
+            </div >
+
+
+            <div class="strong">Heat and Cooling
+              <hr>
+              <div class="cooling-results-clone">
+
+              </div>
+              <hr>
+            </div>
+
+
+
+            <div class="strong">Roofing Materials <span class="text-danger">[selected Option(s)]</span>
+              <hr>
+                <div class="roofing-results-clone">
+                  <ul class="roofing-result">
+
+                  </ul>
+                </div>
+                <hr>
+            </div>
+
+            <div class="strong">Water Assessment <span class="text-danger">[selected Option(s)]</span>
+              <hr>
+
+              <div class="water-results-clone">
+                <ul class="water-selected-list">
+
+                </ul>
+
+                <hr>
+
+                <div class="water-result-clone">
+                 
+                </div>
+              </div>
+              <hr>
+            </div>
+
+            <div class="strong">Suistanable site <span class="text-danger">[selected Option(s)]</span>
+              
+
+              <hr>
+              <div class="site-results-clone">
+                <ul class="site-result">
+
+                </ul>
+              </div>
+              <hr>
+
+            </div>
+
+            <div class="strong">Renewable Energy <span class="text-danger">[selected Option(s)]</span>
+              <hr>
+
+              <div class="renewable-results-clone">
+                <ul class="renewable-result">
+
+                </ul>
+              </div>
+              <hr>
+
+            </div>
+
+            <div class="strong">Daylighting Assessment Parameters <span class="text-danger">[selected Option(s)]</span>
+              <hr>
+              <ul class="daylight-selected-list">
+
+              </ul>
+
+              <hr>
+              <div class="daylight-result-clone">
+
+              </div>
+              <hr>
+
+            </div>
+
+            <div class="strong">Project <span class="text-danger">[selected Option(s)]</span>
+              <hr>
+
+              <div class="project-results-clone">
+                <ul class="project-result">
+
+                </ul>
+              </div>
+              <hr>
+
+            </div>
+
+            <div class="strong">Transport <span class="text-danger">[selected Option(s)]</span>
+              <hr>
+
+              <div class="transport-results-clone">
+                <ul class="transport-result">
+
+                </ul>
+              </div>
+              <hr>
+
+            </div>
+
+            <div class="strong">Pollution/Waste <span class="text-danger">[selected Option(s)]</span>
+              <hr>
+
+              <div class="pollution-results-clone">
+                <ul class="pollution-result">
+
+                </ul>
+              </div>
+              <hr>
+
+            </div>
+
+            <div class="strong">Economics <span class="text-danger">[selected Option(s)]</span>
+              <hr>
+
+              <div class="economics-results-clone">
+                <ul class="economics-result">
+
+                </ul>
+              </div>
+              <hr>
+
+            </div>
+
+            <div class="strong">Education <span class="text-danger">[selected Option(s)]</span>
+              <hr>
+
+              <div class="education-results-clone">
+                <ul class="education-result">
+
+                </ul>
+              </div>
+              <hr>
+
+            </div>
+
+            <div class="strong">Social Cohesion <span class="text-danger">[selected Option(s)]</span>
+              <hr>
+
+              <div class="social-results-clone">
+                <ul class="social-result">
+
+                </ul>
+              </div>
+              <hr>
+
+            </div>
+
+
+          </div><!--/container-->
+         
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" id="print-btn">Print</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+
+    <!--/Report Modal -->
+
+
+<script src="js/myJavascript.js"></script>
+<script src="./js/simple.money.format.js"></script>
+</body>
+</html>
