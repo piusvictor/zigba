@@ -274,6 +274,14 @@ $(document).ready(function(){
 
             var html="";
 
+            var daylightCount=$("input[name='insulation']").length;
+            var daylightCheckedCount=$("input[name='insulation']:checked").length;
+            var daylightPercent=((daylightCheckedCount * 100) / daylightCount).toFixed(1);
+            var progIndicator=colorStatus(daylightPercent);
+
+            //calculating the percentage
+            //html+='<br><b>Performance Score:</b><div class="progress" style="width:70%"><div class="progress-bar '+progIndicator+' progress-bar-striped progress-bar-animated " style="width:'+daylightPercent+'%">'+daylightPercent+'%</div></div>';
+
             $.each($("input[name='insulation']:checked"), function(){            
               
                 html+="<li class='bullets'>"+$(this).val()+"</li>";
@@ -288,8 +296,15 @@ $(document).ready(function(){
                           }               
 
             else{
+
+                var htmlEnergy='<br><b>Performance Score:</b><div class="progress" style="width:70%"><div class="progress-bar progress-bar-striped progress-bar-animated " style="width:100%">100%</div></div>';
+                html+='<br><b>Performance Score:</b><div class="progress" style="width:70%"><div class="progress-bar '+progIndicator+' progress-bar-striped progress-bar-animated " style="width:'+daylightPercent+'%">'+daylightPercent+'%</div></div>';
+
                 $(".energy-results-clone").html("");
-                $(".energy-results").clone().appendTo(".energy-results-clone");                
+
+                $(".energy-results").clone().appendTo(".energy-results-clone");
+                $(".energy-results-clone").append(htmlEnergy);
+
                 $('.insulation-result').html(html);
 
                 //copying cooling results to printable view
@@ -322,6 +337,14 @@ $(document).ready(function(){
 
             var html="";
 
+            var daylightCount=$("input[name='roof']").length;
+            var daylightCheckedCount=$("input[name='roof']:checked").length;
+            var daylightPercent=((daylightCheckedCount * 100) / daylightCount).toFixed(1);
+            var progIndicator=colorStatus(daylightPercent);
+
+            //calculating the percentage
+            //html+='<br><b>Performance Score:</b><div class="progress" style="width:70%"><div class="progress-bar '+progIndicator+' progress-bar-striped progress-bar-animated " style="width:'+daylightPercent+'%">'+daylightPercent+'%</div></div>';
+
             $.each($("input[name='roof']:checked"), function(){            
               
                 html+="<li class='bullets'>"+$(this).val()+"</li>";
@@ -335,7 +358,7 @@ $(document).ready(function(){
                           }               
 
             else{
-               
+                html+='<br><b>Performance Score:</b><div class="progress" style="width:70%"><div class="progress-bar '+progIndicator+' progress-bar-striped progress-bar-animated " style="width:'+daylightPercent+'%">'+daylightPercent+'%</div></div>';
                 //$("#myModal").modal("show");
                 $('.roofing-result').html(html);             
 
@@ -349,6 +372,13 @@ $(document).ready(function(){
          
 
             var html="";
+            var daylightCount=$("input[name='water']").length;
+            var daylightCheckedCount=$("input[name='water']:checked").length;
+            var daylightPercent=((daylightCheckedCount * 100) / daylightCount).toFixed(1);
+            var progIndicator=colorStatus(daylightPercent);
+
+            //calculating the percentage
+            //html+='<br><b>Performance Score:</b><div class="progress" style="width:70%"><div class="progress-bar '+progIndicator+' progress-bar-striped progress-bar-animated " style="width:'+daylightPercent+'%">'+daylightPercent+'%</div></div>';
 
             $.each($("input[name='water']:checked"), function(){            
               
@@ -356,6 +386,10 @@ $(document).ready(function(){
                 water.push($(this).val());
                 
             });
+
+            //calculating the percentage
+           // html+='<br><b>Performance Score:</b><div class="progress" style="width:70%"><div class="progress-bar '+progIndicator+' progress-bar-striped progress-bar-animated " style="width:'+daylightPercent+'%">'+daylightPercent+'%</div></div>';
+
             if(html==""){              
                 //alert('Please select atleast one option from water');
                 //$("#myModal .close").click();     
@@ -363,7 +397,7 @@ $(document).ready(function(){
                           }               
 
             else{
-               
+                html+='<br><b>Performance Score:</b><div class="progress" style="width:70%"><div class="progress-bar '+progIndicator+' progress-bar-striped progress-bar-animated " style="width:'+daylightPercent+'%">'+daylightPercent+'%</div></div>';
                 //$("#myModal").modal("show");
                 $('.water-selected-list').html(html);             
 
@@ -377,6 +411,10 @@ $(document).ready(function(){
          
 
             var html="";
+            var daylightCount=$("input[name='daylight']").length;
+            var daylightCheckedCount=$("input[name='daylight']:checked").length;
+            var daylightPercent=((daylightCheckedCount * 100) / daylightCount).toFixed(1);
+            var progIndicator=colorStatus(daylightPercent);
 
             $.each($("input[name='daylight']:checked"), function(){            
               
@@ -384,6 +422,10 @@ $(document).ready(function(){
                 daylight.push($(this).val());
                 
             });
+
+            //calculating the percentage
+                   // html+='<br><b>Performance Score:</b><div class="progress" style="width:70%"><div class="progress-bar '+progIndicator+' progress-bar-striped progress-bar-animated " style="width:'+daylightPercent+'%">'+daylightPercent+'%</div></div>';
+
             if(html==""){              
                 //alert('Please select atleast one option from water');
                 //$("#myModal .close").click();     
@@ -391,7 +433,7 @@ $(document).ready(function(){
                           }               
 
             else{
-               
+                html+='<br><b>Performance Score:</b><div class="progress" style="width:70%"><div class="progress-bar '+progIndicator+' progress-bar-striped progress-bar-animated " style="width:'+daylightPercent+'%">'+daylightPercent+'%</div></div>';
                 //$("#myModal").modal("show");
                 $('.daylight-selected-list').html(html);             
 
@@ -400,11 +442,39 @@ $(document).ready(function(){
         }
 
 
+        //progressbar status color function
+
+        function colorStatus(percentValue){
+            //let classCol="";
+            
+            if(percentValue>=40 && percentValue<50)
+                return "bg-warning";
+            else if(percentValue>=50 && percentValue<60)
+                return "bg-primary";    
+            else if(percentValue>=60 && percentValue<80)
+               return "bg-info";
+            else if(percentValue>=80)
+                 return "bg-success";
+            else
+                  return "bg-danger";
+
+
+        }
+
+
         //sustainable site select results
         function siteResult(){
          
 
             var html="";
+
+            var daylightCount=$("input[name='site']").length;
+            var daylightCheckedCount=$("input[name='site']:checked").length;
+            var daylightPercent=((daylightCheckedCount * 100) / daylightCount).toFixed(1);
+            var progIndicator=colorStatus(daylightPercent);
+
+            //calculating the percentage
+            //html+='<br><b>Performance Score:</b><div class="progress" style="width:70%"><div class="progress-bar '+progIndicator+' progress-bar-striped progress-bar-animated " style="width:'+daylightPercent+'%">'+daylightPercent+'%</div></div>';
 
             $.each($("input[name='site']:checked"), function(){            
               
@@ -419,7 +489,7 @@ $(document).ready(function(){
                           }               
 
             else{
-               
+                html+='<br><b>Performance Score:</b><div class="progress" style="width:70%"><div class="progress-bar '+progIndicator+' progress-bar-striped progress-bar-animated " style="width:'+daylightPercent+'%">'+daylightPercent+'%</div></div>';
                 //$("#myModal").modal("show");
                 $('.site-result').html(html);             
 
@@ -434,6 +504,14 @@ $(document).ready(function(){
 
             var html="";
 
+            var daylightCount=$("input[name='renewable']").length;
+            var daylightCheckedCount=$("input[name='renewable']:checked").length;
+            var daylightPercent=((daylightCheckedCount * 100) / daylightCount).toFixed(1);
+            var progIndicator=colorStatus(daylightPercent);
+
+            //calculating the percentage
+            //html+='<br><b>Performance Score:</b><div class="progress" style="width:70%"><div class="progress-bar '+progIndicator+' progress-bar-striped progress-bar-animated " style="width:'+daylightPercent+'%">'+daylightPercent+'%</div></div>';
+
             $.each($("input[name='renewable']:checked"), function(){            
               
                 html+="<li class='bullets'>"+$(this).val()+"</li>";
@@ -447,7 +525,7 @@ $(document).ready(function(){
                           }               
 
             else{
-               
+                html+='<br><b>Performance Score:</b><div class="progress" style="width:70%"><div class="progress-bar '+progIndicator+' progress-bar-striped progress-bar-animated " style="width:'+daylightPercent+'%">'+daylightPercent+'%</div></div>';
                 //$("#myModal").modal("show");
                 $('.renewable-result').html(html);             
 
@@ -463,6 +541,13 @@ $(document).ready(function(){
          
 
             var html="";
+            var daylightCount=$("input[name='project']").length;
+            var daylightCheckedCount=$("input[name='project']:checked").length;
+            var daylightPercent=((daylightCheckedCount * 100) / daylightCount).toFixed(1);
+            var progIndicator=colorStatus(daylightPercent);
+
+            //calculating the percentage
+            //html+='<br><b>Performance Score:</b><div class="progress" style="width:70%"><div class="progress-bar '+progIndicator+' progress-bar-striped progress-bar-animated " style="width:'+daylightPercent+'%">'+daylightPercent+'%</div></div>';
 
             $.each($("input[name='project']:checked"), function(){            
               
@@ -478,7 +563,7 @@ $(document).ready(function(){
                           }               
 
             else{
-               
+                html+='<br><b>Performance Score:</b><div class="progress" style="width:70%"><div class="progress-bar '+progIndicator+' progress-bar-striped progress-bar-animated " style="width:'+daylightPercent+'%">'+daylightPercent+'%</div></div>';
                 //$("#myModal").modal("show");
                 $('.project-result').html(html);             
 
@@ -491,6 +576,13 @@ $(document).ready(function(){
          
 
             var html="";
+            var daylightCount=$("input[name='transport']").length;
+            var daylightCheckedCount=$("input[name='transport']:checked").length;
+            var daylightPercent=((daylightCheckedCount * 100) / daylightCount).toFixed(1);
+            var progIndicator=colorStatus(daylightPercent);
+
+            //calculating the percentage
+            //html+='<br><b>Performance Score:</b><div class="progress" style="width:70%"><div class="progress-bar '+progIndicator+' progress-bar-striped progress-bar-animated " style="width:'+daylightPercent+'%">'+daylightPercent+'%</div></div>';
 
             $.each($("input[name='transport']:checked"), function(){            
               
@@ -505,7 +597,7 @@ $(document).ready(function(){
                           }               
 
             else{
-               
+                html+='<br><b>Performance Score:</b><div class="progress" style="width:70%"><div class="progress-bar '+progIndicator+' progress-bar-striped progress-bar-animated " style="width:'+daylightPercent+'%">'+daylightPercent+'%</div></div>';
                 //$("#myModal").modal("show");
                 $('.transport-result').html(html);             
 
@@ -518,6 +610,13 @@ $(document).ready(function(){
          
 
             var html="";
+            var daylightCount=$("input[name='pollution']").length;
+            var daylightCheckedCount=$("input[name='pollution']:checked").length;
+            var daylightPercent=((daylightCheckedCount * 100) / daylightCount).toFixed(1);
+            var progIndicator=colorStatus(daylightPercent);
+
+            //calculating the percentage
+            //html+='<br><b>Performance Score:</b><div class="progress" style="width:70%"><div class="progress-bar '+progIndicator+' progress-bar-striped progress-bar-animated " style="width:'+daylightPercent+'%">'+daylightPercent+'%</div></div>';
 
             $.each($("input[name='pollution']:checked"), function(){            
               
@@ -532,7 +631,7 @@ $(document).ready(function(){
                           }               
 
             else{
-               
+                html+='<br><b>Performance Score:</b><div class="progress" style="width:70%"><div class="progress-bar '+progIndicator+' progress-bar-striped progress-bar-animated " style="width:'+daylightPercent+'%">'+daylightPercent+'%</div></div>';
                 //$("#myModal").modal("show");
                 $('.pollution-result').html(html);             
 
@@ -545,6 +644,13 @@ $(document).ready(function(){
          
 
             var html="";
+            var daylightCount=$("input[name='economics']").length;
+            var daylightCheckedCount=$("input[name='economics']:checked").length;
+            var daylightPercent=((daylightCheckedCount * 100) / daylightCount).toFixed(1);
+            var progIndicator=colorStatus(daylightPercent);
+
+            //calculating the percentage
+            //html+='<br><b>Performance Score:</b><div class="progress" style="width:70%"><div class="progress-bar '+progIndicator+' progress-bar-striped progress-bar-animated " style="width:'+daylightPercent+'%">'+daylightPercent+'%</div></div>';
 
             $.each($("input[name='economics']:checked"), function(){            
               
@@ -559,7 +665,7 @@ $(document).ready(function(){
                           }               
 
             else{
-               
+                html+='<br><b>Performance Score:</b><div class="progress" style="width:70%"><div class="progress-bar '+progIndicator+' progress-bar-striped progress-bar-animated " style="width:'+daylightPercent+'%">'+daylightPercent+'%</div></div>';
                 //$("#myModal").modal("show");
                 $('.economics-result').html(html);             
 
@@ -572,6 +678,13 @@ $(document).ready(function(){
          
 
             var html="";
+            var daylightCount=$("input[name='education']").length;
+            var daylightCheckedCount=$("input[name='education']:checked").length;
+            var daylightPercent=((daylightCheckedCount * 100) / daylightCount).toFixed(1);
+            var progIndicator=colorStatus(daylightPercent);
+
+            //calculating the percentage
+            //html+='<br><b>Performance Score:</b><div class="progress" style="width:70%"><div class="progress-bar '+progIndicator+' progress-bar-striped progress-bar-animated " style="width:'+daylightPercent+'%">'+daylightPercent+'%</div></div>';
 
             $.each($("input[name='education']:checked"), function(){            
               
@@ -586,7 +699,7 @@ $(document).ready(function(){
                           }               
 
             else{
-               
+                html+='<br><b>Performance Score:</b><div class="progress" style="width:70%"><div class="progress-bar '+progIndicator+' progress-bar-striped progress-bar-animated " style="width:'+daylightPercent+'%">'+daylightPercent+'%</div></div>';
                // $("#myModal").modal("show");
                 $('.education-result').html(html);             
 
@@ -599,6 +712,13 @@ $(document).ready(function(){
          
 
             var html="";
+            var daylightCount=$("input[name='social']").length;
+            var daylightCheckedCount=$("input[name='social']:checked").length;
+            var daylightPercent=((daylightCheckedCount * 100) / daylightCount).toFixed(1);
+            var progIndicator=colorStatus(daylightPercent);
+
+            //calculating the percentage
+            //html+='<br><b>Performance Score:</b><div class="progress" style="width:70%"><div class="progress-bar '+progIndicator+' progress-bar-striped progress-bar-animated " style="width:'+daylightPercent+'%">'+daylightPercent+'%</div></div>';
 
             $.each($("input[name='social']:checked"), function(){            
               
@@ -606,6 +726,8 @@ $(document).ready(function(){
                 social.push($(this).val());
                 
             });
+
+           // html+='<br><b>Performance Score:</b><div class="progress" style="width:70%"><div class="progress-bar '+progIndicator+' progress-bar-striped progress-bar-animated " style="width:'+daylightPercent+'%">'+daylightPercent+'%</div></div>';
             if(html==""){              
                 //alert('Please select atleast one option from Social');
                 //$("#myModal .close").click();     
@@ -613,7 +735,7 @@ $(document).ready(function(){
                           }               
 
             else{
-               
+                html+='<br><b>Performance Score:</b><div class="progress" style="width:70%"><div class="progress-bar '+progIndicator+' progress-bar-striped progress-bar-animated " style="width:'+daylightPercent+'%">'+daylightPercent+'%</div></div>';
                 //$("#myModal").modal("show");
                 $('.social-result').html(html);             
 
